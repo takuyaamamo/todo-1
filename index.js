@@ -27,7 +27,7 @@
 	 */
 	function done(task) {
 		if (tasks.has(task)) {
-			tasks.set(task, true)
+			tasks.set(task, true);
 		}
 	}
 	

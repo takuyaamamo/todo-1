@@ -67,9 +67,9 @@ function del(task) {
 }
 
 module.exports = {
-	todo: todo,
-	list: list,
-	done: done,
-	donelist: donelist,
-	del: del
+	todo,
+	list,
+	done,
+	donelist,
+	del
 };

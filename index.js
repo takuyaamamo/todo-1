@@ -7,7 +7,7 @@ const tasks = new Map();
 * @param {string} task
 */
 function todo(task) {
-	tasks.set(task, false);
+  tasks.set(task, false);
 }
 
 /**
@@ -16,7 +16,7 @@ function todo(task) {
 * @return {boolean} 完了したかどうか
 */
 function isDone(taskAndIsDonePair) {
-	return taskAndIsDonePair[1];
+  return taskAndIsDonePair[1];
 }
 
 /**
@@ -25,7 +25,7 @@ function isDone(taskAndIsDonePair) {
 * @return {boolean} 完了していないかどうか
 */
 function isNotDone(taskAndIsDonePair) {
-	return !isDone(taskAndIsDonePair);
+  return !isDone(taskAndIsDonePair);
 }
 
 /**
@@ -33,9 +33,9 @@ function isNotDone(taskAndIsDonePair) {
 * @return {array}
 */
 function list() {
-	return Array.from(tasks)
-		.filter(isNotDone)
-		.map(t => t[0]);
+  return Array.from(tasks)
+    .filter(isNotDone)
+    .map(t => t[0]);
 }
 
 /**
@@ -43,9 +43,9 @@ function list() {
 * @param {string} task
 */
 function done(task) {
-	if (tasks.has(task)) {
-		tasks.set(task, true);
-	}
+  if (tasks.has(task)) {
+    tasks.set(task, true);
+  }
 }
 
 /**
@@ -53,9 +53,9 @@ function done(task) {
 * @return {array}
 */
 function donelist() {
-	return Array.from(tasks)
-		.filter(isDone)
-		.map(t => t[0]);
+  return Array.from(tasks)
+    .filter(isDone)
+    .map(t => t[0]);
 }
 
 /**
@@ -63,13 +63,13 @@ function donelist() {
 * @param {string} task
 */
 function del(task) {
-	tasks.delete(task);
+  tasks.delete(task);
 }
 
 module.exports = {
-	todo: todo,
-	list: list,
-	done: done,
-	donelist: donelist,
-	del: del
+  todo,
+  list,
+  done,
+  donelist,
+  del
 };
